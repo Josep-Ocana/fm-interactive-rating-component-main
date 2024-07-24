@@ -1,145 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta
-			name="description"
-			content="Interactive reting component main by @Josep-Ocana for frontendmentor.io"
-		/>
-		<meta
-			property="ogg:title"
-			content="Interactive rating component main- frontendmentor"
-		/>
-		<meta
-			property="ogg:description"
-			content="interactive rating component main page Solution by @Josep-Ocana for frontendmentor.io"
-		/>
+    <meta
+      name="description"
+      content="Interactive reting component main by @Josep-Ocana for frontendmentor.io"
+    />
+    <meta
+      property="ogg:title"
+      content="Interactive rating component main- frontendmentor"
+    />
+    <meta
+      property="ogg:description"
+      content="interactive rating component main page Solution by @Josep-Ocana for frontendmentor.io"
+    />
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-		<title>Frontend Mentor | Interactive rating component</title>
+    <title>Frontend Mentor | Interactive rating component</title>
 
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
-	</head>
-	<body>
-		<!-- Rating state start -->
-		<section class="sect" id="rating-sect">
-			<form action="">
-				<div class="icon-container">
-					<img
-						class="icon"
-						src="../images/icon-star.svg"
-						alt="icon-star image"
-					/>
-				</div>
-				<h1 class="title">How did we do?</h1>
-				<p class="question">
-					Please let us know how we did with your support request. All
-					feedback is appreciated to help us improve our offering!
-				</p>
-				<div
-					class="rating-container"
-					role="group"
-					aria-labelledby="rating-label"
-				>
-					<button
-						class="rating circle"
-						data-value="1"
-						aria-pressed="false"
-						value="1"
-					>
-						1
-					</button>
-					<button
-						class="rating circle"
-						data-value="2"
-						aria-pressed="false"
-						value="2"
-					>
-						2
-					</button>
-					<button
-						class="rating circle"
-						data-value="3"
-						aria-pressed="false"
-						value="3"
-					>
-						3
-					</button>
-					<button
-						class="rating circle"
-						data-value="4"
-						aria-pressed="false"
-						value="4"
-					>
-						4
-					</button>
-					<button
-						class="rating circle"
-						data-value="5"
-						aria-pressed="false"
-						value="5"
-					>
-						5
-					</button>
-				</div>
-				<button type="submit" id="submit-btn">Submit</button>
-			</form>
-		</section>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <section id="rating-sect" class="sect">
+      <form action="" id="rating-form">
+        <div class="icon-container">
+          <img
+            class="icon"
+            src="../images/icon-star.svg"
+            alt="icon-star image"
+          />
+        </div>
+        <h1 class="title">How did we do?</h1>
+        <p class="question">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div
+          class="rating-container"
+          role="group"
+          aria-labelledby="rating-label"
+        >
+          <button
+            type="button"
+            class="rating circle"
+            data-value="1"
+            aria-pressed="false"
+            value="1"
+          >
+            1
+          </button>
+          <button
+            type="button"
+            class="rating circle"
+            data-value="2"
+            aria-pressed="false"
+            value="2"
+          >
+            2
+          </button>
+          <button
+            type="button"
+            class="rating circle"
+            data-value="3"
+            aria-pressed="false"
+            value="3"
+          >
+            3
+          </button>
+          <button
+            type="button"
+            class="rating circle"
+            data-value="4"
+            aria-pressed="false"
+            value="4"
+          >
+            4
+          </button>
+          <button
+            type="button"
+            class="rating circle"
+            data-value="5"
+            aria-pressed="false"
+            value="5"
+          >
+            5
+          </button>
+        </div>
+        <button type="button" id="submit-btn">Submit</button>
+      </form>
+    </section>
 
-		<!-- Rating state end -->
+    <!-- Rating state end -->
 
-		<!-- Thank you state start -->
+    <!-- Thank you state start -->
 
-		<section id="thank-sect" class="sect">
-			<div class="icon-rating-container">
-				<img
-					id="icon"
-					src="../images/illustration-thank-you.svg"
-					alt="icon-star image"
-				/>
-			</div>
-			<span class="rated">You selected 4 out of 5</span>
-			<h2 class="thank-title">Thank you!</h2>
+    <section id="thank-sect" class="sect hidden">
+      <div class="icon-rating-container">
+        <img
+          id="icon"
+          src="../images/illustration-thank-you.svg"
+          alt="icon-star image"
+        />
+      </div>
+      <span class="rated"
+        >You selected <span class="value"></span> out of 5</span
+      >
+      <h2 class="thank-title">Thank you!</h2>
 
-			<p class="agreements">
-				We appreciate you taking the time to give a rating. If you ever need
-				more support, don’t hesitate to get in touch!
-			</p>
-		</section>
+      <p class="agreements">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </section>
 
-		<!-- Thank you state end -->
+    <!-- Thank you state end -->
 
-		<footer class="attribution">
-			<div id="challenge">
-				Challenge by
-				<a
-					id="frontend"
-					href="https://www.frontendmentor.io?ref=challenge"
-					target="_blank"
-					>Frontend Mentor</a
-				>
-				|
-			</div>
-			<div id="coded">Coded by <a id="me" href="#">@Josep-Ocana </a>.</div>
-		</footer>
+    <footer class="attribution">
+      <div id="challenge">
+        Challenge by
+        <a
+          id="frontend"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >
+        |
+      </div>
+      <div id="coded">Coded by <a id="me" href="#">@Josep-Ocana </a>.</div>
+    </footer>
 
-		<script type="module" src="src/main.js"></script>
-	</body>
+    <script type="module" src="src/main.js"></script>
+  </body>
 </html>
