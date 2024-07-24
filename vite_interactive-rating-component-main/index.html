@@ -3,7 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
+
+		<meta
+			name="description"
+			content="Interactive reting component main by @Josep-Ocana for frontendmentor.io"
+		/>
+		<meta
+			property="ogg:title"
+			content="Interactive rating component main- frontendmentor"
+		/>
+		<meta
+			property="ogg:description"
+			content="interactive rating component main page Solution by @Josep-Ocana for frontendmentor.io"
+		/>
 
 		<link
 			rel="icon"
@@ -27,27 +39,106 @@
 	</head>
 	<body>
 		<!-- Rating state start -->
-
-		How did we do? Please let us know how we did with your support request. All
-		feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
+		<section class="sect" id="rating-sect">
+			<form action="">
+				<div class="icon-container">
+					<img
+						class="icon"
+						src="../images/icon-star.svg"
+						alt="icon-star image"
+					/>
+				</div>
+				<h1 class="title">How did we do?</h1>
+				<p class="question">
+					Please let us know how we did with your support request. All
+					feedback is appreciated to help us improve our offering!
+				</p>
+				<div
+					class="rating-container"
+					role="group"
+					aria-labelledby="rating-label"
+				>
+					<button
+						class="rating circle"
+						data-value="1"
+						aria-pressed="false"
+						value="1"
+					>
+						1
+					</button>
+					<button
+						class="rating circle"
+						data-value="2"
+						aria-pressed="false"
+						value="2"
+					>
+						2
+					</button>
+					<button
+						class="rating circle"
+						data-value="3"
+						aria-pressed="false"
+						value="3"
+					>
+						3
+					</button>
+					<button
+						class="rating circle"
+						data-value="4"
+						aria-pressed="false"
+						value="4"
+					>
+						4
+					</button>
+					<button
+						class="rating circle"
+						data-value="5"
+						aria-pressed="false"
+						value="5"
+					>
+						5
+					</button>
+				</div>
+				<button type="submit" id="submit-btn">Submit</button>
+			</form>
+		</section>
 
 		<!-- Rating state end -->
 
 		<!-- Thank you state start -->
 
-		You selected
-		<!-- Add rating here -->
-		out of 5 Thank you! We appreciate you taking the time to give a rating. If
-		you ever need more support, don’t hesitate to get in touch!
+		<section id="thank-sect" class="sect">
+			<div class="icon-rating-container">
+				<img
+					id="icon"
+					src="../images/illustration-thank-you.svg"
+					alt="icon-star image"
+				/>
+			</div>
+			<span class="rated">You selected 4 out of 5</span>
+			<h2 class="thank-title">Thank you!</h2>
+
+			<p class="agreements">
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don’t hesitate to get in touch!
+			</p>
+		</section>
 
 		<!-- Thank you state end -->
 
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div>
+		<footer class="attribution">
+			<div id="challenge">
+				Challenge by
+				<a
+					id="frontend"
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>
+				|
+			</div>
+			<div id="coded">Coded by <a id="me" href="#">@Josep-Ocana </a>.</div>
+		</footer>
 
 		<script type="module" src="src/main.js"></script>
 	</body>

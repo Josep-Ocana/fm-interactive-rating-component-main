@@ -1,0 +1,43 @@
+@mixin row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin line-height($height) {
+	line-height: $height;
+}
+
+@mixin weight($weight) {
+	font-weight: $weight;
+}
+
+@mixin letter-spacing($letter-spacing) {
+	letter-spacing: $letter-spacing;
+}
+
+@mixin color-weight($color, $weight) {
+	color: $color;
+	font-weight: $weight;
+}
+
+@mixin button($color, $background, $size, $padding) {
+	color: $color;
+	background-color: $background;
+	font-size: $size;
+	padding: $padding;
+	text-align: center;
+}
+
+@mixin radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin grid {
+	display: grid;
+	place-content: center;
+}
