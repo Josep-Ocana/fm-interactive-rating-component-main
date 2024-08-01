@@ -4,147 +4,173 @@
 @import 'resets';
 
 body {
-  @include grid;
-  min-height: 100vh;
+	@include grid;
+	min-height: 100vh;
 }
 
 // Rating section ________________________________________________
 
 .sect {
-  @include radius(25px);
-  width: 22rem;
-  height: 22.5rem;
-  background: $dark-blue;
-  padding: 25px;
+	@include radius(25px);
+	width: 22rem;
+	height: 22.5rem;
+	background: $dark-blue;
+	padding: 25px;
 }
 
 .icon-container {
-  @include row;
-  justify-content: center;
-  align-items: center;
-  @include radius(50%);
-  width: 40px;
-  height: 40px;
-  background: $dark-blue-opacity;
+	@include row;
+	justify-content: center;
+	align-items: center;
+	@include radius(50%);
+	width: 40px;
+	height: 40px;
+	background: $dark-blue-opacity;
 }
 
 .icon {
-  width: 35%;
+	width: 35%;
 }
 
 .title {
-  font-size: 1.47rem;
+	font-size: 1.47rem;
 }
 
 .question {
-  @include line-height(1.3rem);
-  font-size: 12px;
-  color: $light-grey;
+	@include line-height(1.3rem);
+	font-size: 12px;
+	color: $light-grey;
 }
 
 form {
-  @include column;
-  align-items: start;
+	@include column;
+	align-items: start;
 }
 
 form > * {
-  margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .rating-container {
-  @include row;
-  width: 100%;
-  justify-content: space-between;
+	@include row;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .rating {
-  @include weight(600);
-  @include radius(50%);
-  background: $dark-blue-opacity;
-  color: $light-grey;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+	@include weight(600);
+	@include radius(50%);
+	background: $dark-blue-opacity;
+	color: $light-grey;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
 }
 
 #submit-btn {
-  @include button($very-dark-blue, $orange, 0.8rem, 0.6rem);
-  @include radius(1.4rem);
-  @include weight(600);
-  @include letter-spacing(1px);
-  width: 100%;
-  text-transform: uppercase;
-  cursor: pointer;
+	@include button($very-dark-blue, $orange, 0.8rem, 0.6rem);
+	@include radius(1.8rem);
+	@include weight(600);
+	@include letter-spacing(1px);
+	width: 100%;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+#submit-btn:hover {
+	background-color: $white;
 }
 
-#submit-btn:hover,
 .rating:hover {
-  background: $white;
+	background: $orange;
 }
 
 .button-selected {
-  color: $very-dark-blue;
-  background-color: $orange;
+	color: $very-dark-blue;
+	background-color: $white;
 }
 
 // Thank section _________________________________________________
 #thank-sect {
-  @include column;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 2.5rem;
+	@include column;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 2.5rem;
 }
 
 .icon-rating-container {
-  width: fit-content;
-  max-width: 9rem;
+	width: fit-content;
+	max-width: 9rem;
 
-  img {
-    width: 100%;
-  }
+	img {
+		width: 100%;
+	}
 }
 
 .rated {
-  @include button($orange, $dark-blue-opacity, 0.8rem, 0.4rem);
-  @include radius(20px);
-  width: 60%;
+	@include button($orange, $dark-blue-opacity, 0.8rem, 0.4rem);
+	@include radius(20px);
+	width: 60%;
 }
 
 .thank-title {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .agreements {
-  @include line-height(20px);
-  text-align: center;
-  color: $light-grey;
-  font-size: 0.82rem;
+	@include line-height(20px);
+	text-align: center;
+	color: $light-grey;
+	font-size: 0.82rem;
 }
 
 // Footer
 .attribution {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  @include row;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	@include row;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+	padding: 20px;
 
-  a {
-    font: {
-      family: $font-primary;
-      weight: 500;
-    }
-    color: $orange;
-  }
+	a {
+		font: {
+			family: $font-primary;
+			weight: 500;
+		}
+		color: $orange;
+	}
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-.hidden {
-  display: none;
+#thank-sect.hidden,
+#rating-sect.hidden {
+	display: none;
+}
+
+// MEDIA QUERY
+// Width : 375px
+@media (width < 376px) {
+	.sect {
+		@include radius(15px);
+		height: 24.5rem;
+	}
+
+	form > * {
+		margin-bottom: 1.65rem;
+	}
+
+	.question,
+	.agreements {
+		@include line-height(1.5rem);
+		font-size: 14px;
+	}
+
+	#submit-btn {
+		padding: 15px;
+	}
 }
