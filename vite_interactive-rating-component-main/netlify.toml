@@ -1,0 +1,3 @@
+[build]
+publish = "'vite_interactive-rating-component-main/dist"
+command = "npm run dev"
