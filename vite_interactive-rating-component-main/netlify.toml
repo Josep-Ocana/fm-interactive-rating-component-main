@@ -1,4 +1,6 @@
 [build]
+
+base = "vite_interactive-rating-component-main"
 publish = "'vite_interactive-rating-component-main/dist"
 command = "npm run dev"
 
