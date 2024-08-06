@@ -51,7 +51,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [My solution](https://github.com/Josep-Ocana/fm-interactive-rating-component-main)
+-   Solution URL: [My solution](https://github.com/Josep-Ocana/frontend-vite-interactive-rating-component-main)
 -   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
