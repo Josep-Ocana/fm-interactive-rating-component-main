@@ -89,7 +89,7 @@ form > * {
 	background-color: $white;
 }
 
-// Thank section _________________________________________________
+// Thank section ____________________________________________
 #thank-sect {
 	@include column;
 	justify-content: space-between;
@@ -123,7 +123,7 @@ form > * {
 	font-size: 0.82rem;
 }
 
-// Footer
+// Footer __________________________________________________
 .attribution {
 	position: absolute;
 	bottom: 0;
@@ -136,6 +136,7 @@ form > * {
 
 	a {
 		font: {
+			size: 13px;
 			family: $font-primary;
 			weight: 500;
 		}
